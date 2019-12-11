@@ -5,7 +5,7 @@ from plone.registry.field import PersistentField
 from z3c.form.object import registerFactoryAdapter
 from zope import schema
 from zope.interface import Interface
-from zope.interface import implements
+from zope.interface import implementer
 
 
 class ILimitFileSizePanelLayer(Interface):
@@ -44,9 +44,8 @@ class ITypesSettings(Interface):
         required=True
     )
 
-
+@implementer(ITypesSettings)
 class TypesSettings(object):
-    implements(ITypesSettings)
 
     def __init__(self, content_type=None, field_name=None, size=None):
         self.content_type = content_type

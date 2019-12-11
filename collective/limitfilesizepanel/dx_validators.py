@@ -18,8 +18,8 @@ class DXFileSizeValidator(validator.FileUploadValidator):
         if not value:
             return True
 
-        if isinstance(self.view, DefaultEditForm):
-            return True
+        #if isinstance(self.view, DefaultEditForm):
+        #    return True
         try:
             helper_view = api.content.get_view(
                 name='lfsp_helpers_view',

@@ -42,7 +42,8 @@ setup(name='collective.limitfilesizepanel',
           'plone.app.registry',
           'collective.monkeypatcher>=1.0',
           'plone.api',
-          'z3c.unconfigure'
+          'z3c.unconfigure',
+          'Products.validation'
       ],
       entry_points="""
       # -*- Entry points: -*-
